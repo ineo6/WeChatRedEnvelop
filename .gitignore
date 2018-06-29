@@ -3,3 +3,5 @@ obj
 *.deb
 .theos/
 .DS_Store
+sh/app
+sh/result

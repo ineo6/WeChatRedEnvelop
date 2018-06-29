@@ -11,6 +11,13 @@ TWEAK_NAME = WeChatRedEnvelop
 WeChatRedEnvelop_FILES = $(wildcard src/*.m) src/Tweak.xm
 WeChatRedEnvelop_FRAMEWORKS = UIKit
 
+SUBSTRATE ?= yes
+instance_USE_SUBSTRATE = $(SUBSTRATE)
+
+#指定版本
+_THEOS_TARGET_LDFLAGS += -current_version 1.0
+_THEOS_TARGET_LDFLAGS += -compatibility_version 1.0
+
 include $(THEOS_MAKE_PATH)/tweak.mk
 
 after-install::
