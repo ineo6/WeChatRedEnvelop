@@ -57,13 +57,7 @@
     [self addBasicSettingSection];
     [self addSupportSection];
     
-    CContactMgr *contactMgr = [[objc_getClass("MMServiceCenter") defaultCenter] getService:objc_getClass("CContactMgr")];
-    
-    if ([contactMgr isInContactList:@"gh_6e8bddcdfca3"]) {
-        [self addAdvanceSettingSection];
-    } else {
-        [self addAdvanceLimitSection];
-    }
+    [self addAdvanceSettingSection];
     
     [self addAboutSection];
     
