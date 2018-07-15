@@ -1,5 +1,8 @@
 BUNDLEIDENTIFIER=com.neo.SingleEmpty
 ORIGINAL_IPA=./app/wx661.ipa
+user='iPhone Developer: ineo6@qq.com (VE5R5X5W42)'
+appName=WeChat.app
+
 LIBNAME=WeChatRedEnvelop.dylib
 LIBSUBSTRATE=libsubstrate.dylib
 
@@ -12,10 +15,6 @@ LIB_PATH=../.theos/obj/debug/
 payloadDirectory=${workspace}/Payload
 entitlementsPlistPath=${workspace}/entitlements.plist
 
-appName=WeChat.app
-
-user='iPhone Developer: ineo6@qq.com (VE5R5X5W42)'
-
 appBundlePath=${payloadDirectory}/${appName}
 appBundleInfoPlist=${appBundlePath}/Info.plist
 appBundleProvisioningFilePath=${appBundlePath}/embedded.mobileprovision
@@ -25,8 +24,8 @@ function blue(){
 }
 
 
-#rm -rf payloadDirectory
-#mkdir payloadDirectory
+rm -rf $payloadDirectory
+mkdir $payloadDirectory 
 
 # 1.unzip ipa
 blue '解压ipa'
